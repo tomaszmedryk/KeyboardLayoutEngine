@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Shadow
 
 // MARK: - KeyboardButtonType
 public enum KeyboardButtonType {
