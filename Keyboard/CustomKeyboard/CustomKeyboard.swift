@@ -202,12 +202,12 @@ open class CustomKeyboard: UIView, KeyboardLayoutDelegate {
     backspaceDeleteTimer = nil
   }
 
-  internal func startBackspaceAutoDeleteMode() {
+    @objc internal func startBackspaceAutoDeleteMode() {
     invalidateBackspaceDeleteTimer()
     startBackspaceDeleteTimer()
   }
 
-  internal func autoDelete() {
+    @objc internal func autoDelete() {
     delegate?.customKeyboardBackspaceButtonPressed?(self)
   }
 
@@ -221,7 +221,7 @@ open class CustomKeyboard: UIView, KeyboardLayoutDelegate {
       repeats: false)
   }
 
-  internal func invalidateShiftToggleTimer() {
+    @objc internal func invalidateShiftToggleTimer() {
     shiftToggleTimer?.invalidate()
     shiftToggleTimer = nil
   }
@@ -241,7 +241,7 @@ open class CustomKeyboard: UIView, KeyboardLayoutDelegate {
     keyMenuOpenTimer = nil
   }
 
-  open func openKeyMenu(_ timer: Timer) {
+    @objc open func openKeyMenu(_ timer: Timer) {
     if let userInfo = timer.userInfo, let keyboardButton = userInfo as? KeyboardButton {
       keyMenuShowingKeyboardButton = keyboardButton
     }
